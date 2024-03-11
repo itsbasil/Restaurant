@@ -1,0 +1,553 @@
+ <html>  
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap" rel="stylesheet">
+  <style>/* general*/
+*{
+    font-family: "league spartan";
+}
+body {
+    overflow-x: hidden;
+}
+a{
+    text-decoration:none !important;
+   color:white;
+}
+h2 {
+    font-size:3.5rem;
+}
+h3{
+    font-size:1.5rem;
+}
+h5{
+    font-size:0.5rem;
+}
+.container{
+    max-width: 1080px;
+}
+
+/*nav */
+#logo {
+    max-width:150px;
+}
+#navcima{
+    background-color:black;
+    top:0;
+    position: sticky;
+    z-index: 5;
+}
+
+.nav-link{
+    color:white!important;
+}
+
+/* carousel*/
+#peca-agora {
+  background-color:black;
+  padding:40px 0 77px 0;
+}
+
+/*menu*/
+.menu{
+  background-color:black;
+  padding-bottom:50px;
+}
+.menu .menu-content {
+  margin-top: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  color:white;
+}
+.menu .menu-content::after {
+  content: "......................................................................" "...................................................................." "....................................................................";
+  position: absolute;
+  left: 20px;
+  right: 0;
+  top: -4px;
+  color: white;
+}
+.menu .menu-content a {
+  padding-right: 10px;
+  background: black;
+  position: relative;
+  z-index: 3;
+  font-weight: 700;
+  color: white;
+}
+.menu .menu-content span {
+  background: black;
+  position: relative;
+  z-index: 3;
+  padding: 0 10px;
+  font-weight: 600;
+}
+.menu .menu-ingredients {
+  font-style: italic;
+  font-size: 14px;
+  font-family: "Comic Neue", sans-serif;
+  color: white;
+}
+
+.overflow-auto {
+  height:500px;
+
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(200,200,200,0);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color:rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0 0 6px rgba(200,200,200,0.5);
+}
+
+/* quem somos */
+#quem-somos {
+  background-color:black;
+}
+
+.place {
+  padding-bottom:50px;
+}
+.img-fluid{
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.pic {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  border-radius: 5px;
+  transition: .5s ease;
+  background-color: #F68116;
+}
+
+.place:hover .overlay {
+  opacity: 0.7;
+}
+
+.subtitle{
+  color: white;
+  font-size: 1.5rem;
+  font-weight:bolder;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* fale conosco*/
+#contato {
+  background-color:black;
+  padding:50px 0 50px 0;
+}
+.title-contato{
+   line-height:0;
+/*footer*/
+}
+.fa-brands {
+  color:white;
+}
+.fa-brands:hover{
+  color: #F68116;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding-top:10px;
+  background: black;
+  color:white;
+
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+
+  flex-wrap: wrap;
+
+}
+
+.contact-details {
+  font-size: 1.4rem;
+  transition: transform 0.3s ease-out;
+ }
+
+.contact-details:hover {
+  transform: translateY(4px);
+
+}</style>
+    <title>Pizza Hut Restaurante</title>
+  </head>
+<body>
+<section id="navcima">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg" id="nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home">
+          <img src="https://gatewayworld.co.za/wp-content/uploads/2023/09/Pizza-Hut_Logo.jpg" id="logo" alt="logo-dona-ana">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span><i class="fa-solid fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="location">Location</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>
+</section>
+<section id="peca-agora">
+      <div class="carousel slide carousel-fade carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="5000">
+        <a href="#"> 
+      <img class="d-block w-100" src="https://scontent.fccj6-2.fna.fbcdn.net/v/t1.18169-9/292251_383293028378901_2071883748_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=X1Vf2FBx7UsAX_OB3bh&_nc_ht=scontent.fccj6-2.fna&oh=00_AfA8kpRxBJhmzWGWHBylNXc9XN6wOCtc3rivDjjBdB4eCw&oe=66163914" alt="promoção">
+    </a>
+    </div>
+    <div class="carousel-item" data-bs-interval="5000">
+        <a href="#"> 
+      <img class="d-block w-100" src="https://scontent.fccj6-2.fna.fbcdn.net/v/t1.18169-9/1174686_577421972299338_280030091_n.png?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VbxqydccobsAX93Zf-8&_nc_ht=scontent.fccj6-2.fna&oh=00_AfB7GzIeyLpeffechtpLxV8S8G58Er4ey2Iag1mO5wKucw&oe=66165212" alt="Segundo Slide">
+      </a>
+    </div>
+    <div class="carousel-item" data-bs-interval="5000">
+        <a href="#"> 
+      <img class="d-block w-100" src="https://scontent.fccj6-2.fna.fbcdn.net/v/t1.18169-9/11401467_914907675217431_6120748027391939256_n.png?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=5enJi77EbMUAX8N2FZa&_nc_ht=scontent.fccj6-2.fna&oh=00_AfCPZmwUcsRhESDQ8GFimnkyuXA7isbmDFfb1ZTXVjJbcQ&oe=66165993" alt="Terceiro Slide">
+      </a>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+  </a>
+</div>
+  </div>
+  </div>
+</section>
+<section id="menu">
+     <section id="cardapio" class="menu">
+      <div class="container overflow-auto">
+        <div class="section-title">
+          <h2 class="text-center text-white">Menu</span></h2>
+        </div>
+        <div class="row menu-container">
+          <div class="col-lg-6 menu-item filter-starters">
+            <div class="menu-content">
+              <a href="#peca-agora">Maragherita</a><span>R$99.95</span>
+            </div>
+            <div class="menu-ingredients">
+              ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <div class="menu-content">
+              <a href="#peca-agora">Classic Corn</a><span>R$46.95</span>
+            </div>
+            <div class="menu-ingredients">
+              ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <div class="menu-content">
+              <a href="#peca-agora">Classic Tpmato</a><span>R$59.55</span>
+            </div>
+            <div class="menu-ingredients">
+             ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <div class="menu-content">
+              <a href="#peca-agora">Spiced Chicken Meatballs</a><span>R$108.95</span>
+            </div>
+            <div class="menu-ingredients">
+              ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <div class="menu-content">
+              <a href="#peca-agora">Chicken Sousage</a><span>R$49.95</span>
+            </div>
+            <div class="menu-ingredients">
+              ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <div class="menu-content">
+              <a href="#peca-agora">Checken Pepperoni</a><span>R$44.95</span>
+            </div>
+            <div class="menu-ingredients">
+             ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <div class="menu-content">
+              <a href="#peca-agora">Veg Exotica</a><span>R$35.95</span>
+            </div>
+            <div class="menu-ingredients">
+             ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <div class="menu-content">
+              <a href="#peca-agora">Smoked Chicken</a><span>R$59.95</span>
+            </div>
+            <div class="menu-ingredients">
+              ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <div class="menu-content">
+              <a href="#peca-agora">Paneer Soya Supreme</a><span>R$82.95</span>
+            </div>
+            <div class="menu-ingredients">
+              ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+            <div class="col-lg-6 menu-item filter-starters">
+            <div class="menu-content">
+              <a href="#peca-agora">Chicken Italiano</a><span>R$165.95</span>
+            </div>
+            <div class="menu-ingredients">
+              ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <div class="menu-content">
+              <a href="#peca-agora">Chicken exotica</a><span>R$126.95</span>
+            </div>
+            <div class="menu-ingredients">
+              ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+            <div class="col-lg-6 menu-item filter-starters">
+            <div class="menu-content">
+              <a href="#peca-agora">Lebanese Chicken</a><span>R$115.95</span>
+            </div>
+            <div class="menu-ingredients">
+              ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <div class="menu-content">
+              <a href="#peca-agora">Chicken Sausage & Tikka</a><span>R$146.95</span>
+            </div>
+            <div class="menu-ingredients">
+              ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+            <div class="col-lg-6 menu-item filter-starters">
+            <div class="menu-content">
+              <a href="#peca-agora">Tandoori Paneer</a><span>R$47.95</span>
+            </div>
+            <div class="menu-ingredients">
+              ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <div class="menu-content">
+              <a href="#peca-agora">Soya Masala</a><span>R$36.95</span>
+            </div>
+            <div class="menu-ingredients">
+              ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+            <div class="col-lg-6 menu-item filter-starters">
+            <div class="menu-content">
+              <a href="#peca-agora">Veggie Feast</a><span>R$55.95</span>
+            </div>
+            <div class="menu-ingredients">
+              ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <div class="menu-content">
+              <a href="#peca-agora">Family Fun Meal</a><span>R$246.95</span>
+            </div>
+            <div class="menu-ingredients">
+              ingredientes, etc, ingredientes, etc,ingredientes, etc
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section id='quem-somos'>
+      <div class="container">
+        <div class="section-title text-center text-white">
+          <h2>About</h2>
+          <p>There’s nothing cookie-cutter about Pizza Hut. Not our pizzas. Not our people. And definitely not the way we live life. Around here, we don’t settle for anything less than food we’re proud to serve. And we don’t just clock in. Not when we can also become our best, make friends, and have fun while we’re at it. <b>We’re the pizza company that lives life unboxed.</b></p>
+
+  </div>
+         <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class='place'>
+              <div class="pic"><img src="https://d4t7t8y8xqo0t.cloudfront.net/resized/720X480/restaurant%2F671582%2Fpizza.jpg" class="img-fluid" alt="pizza-camarao">
+                <div class="overlay">
+                  <div class="subtitle">Margherita</div>
+                  </div>
+              </div>
+            </div>
+           </div>
+             <div class="col-lg-4 col-md-6">
+            <div class='place'>
+              <div class="pic"><img src="https://www.verywellfit.com/thmb/LvjZKk9XsA_iGaDOMlVf8fnhk5Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/pizza-hut-nutrition-facts-menu-choices-and-calories-4118008-0abd569588f34ef98f11f23273c28b4c.jpg" class="img-fluid" alt="menu-e-vinho">
+                 <div class="overlay">
+                  <div class="subtitle">Veg / Non</div>
+                  </div>
+              </div>
+            </div>
+           </div>
+
+              <div class="col-lg-4 col-md-6">
+            <div class='place'>
+              <div class="pic"><img src="https://philregalo.com/cdn/shop/products/pizzahut3_1024x1024.jpg?v=1602840971" class="img-fluid" alt="menu-e-vinho">
+                 <div class="overlay">
+                  <div class="subtitle">Hot Honey</div>
+                  </div>
+              </div>
+            </div>
+           </div>
+
+              <div class="col-lg-4 col-md-6">
+            <div class='place'>
+              <div class="pic"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGPxqZ8c6wT9ABcc3dxN12mo7UqayHhMg2FUF_84T6RywjZNSwLySmHzQReEojb2w2XbQ&usqp=CAU" class="img-fluid" alt="menu-e-vinho">
+                 <div class="overlay">
+                  <div class="subtitle">Keep's Everyone Happy</div>
+                  </div>
+              </div>
+            </div>
+           </div>
+
+              <div class="col-lg-4 col-md-6">
+            <div class='place'>
+              <div class="pic"><img src="https://blog.pizzahut.com/wp-content/uploads/2022/10/Pizza_Hut_MELTS.jpg" class="img-fluid" alt="menu-e-vinho">
+                 <div class="overlay">
+                  <div class="subtitle">Thin N’ Crispy</div>
+                  </div>
+              </div>
+            </div>
+           </div>
+
+             <div class="col-lg-4 col-md-6">
+            <div class='place'>
+              <div class="pic"><img src="https://blog.pizzahut.com/wp-content/uploads/2020/12/OPD015514_TripleTreatBox_PR_Image_1920x1080_2hz-1024x576.jpg" class="img-fluid" alt="clientes">
+                 <div class="overlay">
+                  <div class="subtitle">TripleTreatBox</div>
+                  </div>
+              </div>
+            </div>
+           </div>
+        </div>
+      </div>
+  </section>
+<section id='contato'>
+  <div class='text-center text-white contato'>
+    <h2>Location</h2><br>
+  </div>
+     <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-5 text-end text-white  pt-0">
+        <div class='title-contato'><h3>Pizza Hut<br></h3><p>Pizza Restaurant</p></div>
+         <br><p>Grand Mall, Edachira Rd, near Info Park, Kochi, Kerala 682030<br>(75)99466-84561</p>
+          <div class='social-icons h3'>
+            <a href='https://www.instagram.com/pizzahut_india/?hl=en'><i class="fa-brands fa-instagram"></i></a>
+            <a href='https://www.facebook.com/pizzahutindia/'><i class="fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
+        
+            <div class="col-12 col-md-5 mb-5 mb-md-0">
+           
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.56395072220928!2d76.36486897460186!3d10.014941180948126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080b1337e8a5eb%3A0x710bfb1ddba8aa54!2sPizza%20Hut!5e0!3m2!1sen!2sin!4v1710137358127!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+</section>
+<footer id="contact" class="contact-section border-top">
+  <div>
+    <a
+      id="profile-link"
+      href="https://github.com/itsbasil"
+      target="_blank"
+      class="btn text-white contact-details"
+      ><i class="fab fa-github"></i> GitHub</a
+    >
+    <a
+      href="https://www.linkedin.com/in/basil-george-732a22283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+      target="_blank"
+      class="btn text-white contact-details"
+      ><i class="fa-brands fa-linkedin"></i> linkedin</a
+    >
+    <a
+      href="https://www.instagram.com/basil__ge0rge?igsh=bzUzZ2libmVrd2sx"
+      target="_blank"
+      class="btn text-white contact-details"
+      ><i class="fa-brands fa-instagram"></i> Instagram</a
+    >
+
+  </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
